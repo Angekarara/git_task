@@ -339,3 +339,98 @@ $ git log --graph
 :
 ```
 
+## Part 2: Branching Basics (10 Challenges)
+### 1.Feature Branch Creation:
+```
+Ange Karara Mbabazi@DESKTOP-Q5MA0LI MINGW64 ~/git_task (main)
+$ git checkout -b ft/new-feature
+Switched to a new branch 'ft/new-feature'
+```
+### 2.Working on the Feature Branch:
+```
+Ange Karara Mbabazi@DESKTOP-Q5MA0LI MINGW64 ~/git_task (main)
+$ git checkout -b ft/new-feature
+Switched to a new branch 'ft/new-feature'
+
+Ange Karara Mbabazi@DESKTOP-Q5MA0LI MINGW64 ~/git_task (ft/new-feature)
+$ echo "Core functionality for the new feature." > feature.txt
+
+Ange Karara Mbabazi@DESKTOP-Q5MA0LI MINGW64 ~/git_task (ft/new-feature)
+$ git add feature.txt
+warning: in the working copy of 'feature.txt', LF will be replaced by CRLF the next time Git touches it
+
+Ange Karara Mbabazi@DESKTOP-Q5MA0LI MINGW64 ~/git_task (ft/new-feature)
+$ git commit -m "Implemented core functionality for new feature"
+[ft/new-feature c383abb] Implemented core functionality for new feature
+ 1 file changed, 1 insertion(+)
+ create mode 100644 feature.txt
+```
+### 3.Switching Back and Making More Changes:
+```
+Ange Karara Mbabazi@DESKTOP-Q5MA0LI MINGW64 ~/git_task (main)
+$ echo "the introductory content." > readme.txt
+
+Ange Karara Mbabazi@DESKTOP-Q5MA0LI MINGW64 ~/git_task (main)
+$ git commit -m "Updated project readme"
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.md
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        readme.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+```
+### 5.Branch Deletion:
+```
+ git branch -d ft/new-feature 
+Deleted branch ft/new-feature (was c383abb).
+```
+### 6.Creating a Branch from a Commit:
+```
+Ange Karara Mbabazi@DESKTOP-Q5MA0LI MINGW64 ~/git_task (main)
+$ git log
+commit d89cff1e3f1b1d0ec12a10253608380ad18ed5eb (HEAD -> main, origin/main)
+Merge: e2020db c383abb
+Author: Angekarara <99403587+Angekarara@users.noreply.github.com>
+Date:   Tue May 21 16:34:14 2024 +0200
+
+    Merge pull request #2 from Angekarara/ft/new-feature
+
+    Implemented core functionality for new feature
+
+commit c383abbd78e194d0c0cf891b9cecc8ebb3edb893 (origin/ft/new-feature)
+Author: Angekarara <mbabange2020@gmail.com>
+Date:   Tue May 21 16:08:19 2024 +0200
+
+    Implemented core functionality for new feature
+
+Ange Karara Mbabazi@DESKTOP-Q5MA0LI MINGW64 ~/git_task (main)
+$ git checkout -b ft/new-branch-from-commit c383abbd78e194d0c0cf891b9cecc8ebb3edb893
+M       README.md
+A       readme.txt
+Switched to a new branch 'ft/new-branch-from-commit'
+```
+
+### 7.Branch Merging:
+```
+Ange Karara Mbabazi@DESKTOP-Q5MA0LI MINGW64 ~/git_task (ft/new-branch-from-commit)
+$ git checkout main
+M       README.md
+A       readme.txt
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+Ange Karara Mbabazi@DESKTOP-Q5MA0LI MINGW64 ~/git_task (main)
+$ git merge ft/new-branch-from-commit
+Already up to date.
+```
+### 8.Branch Rebasing:
+```
+
+```
