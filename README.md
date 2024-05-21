@@ -545,5 +545,78 @@ Dropped refs/stash@{0} (3affdc5d09915eb0c4cc305fc779198a717846c0)
 ```
 ### 3.Branch Merging Conflicts (Continued):
 ```
+Ange Karara Mbabazi@DESKTOP-Q5MA0LI MINGW64 ~/git_task (main)
+$ git checkout -b feature-branch
+Switched to a new branch 'feature-branch'
+
+Ange Karara Mbabazi@DESKTOP-Q5MA0LI MINGW64 ~/git_task (feature-branch)
+$ echo "Feature branch changes" >> file.txt
+
+Ange Karara Mbabazi@DESKTOP-Q5MA0LI MINGW64 ~/git_task (feature-branch)
+$ git add file.txt
+warning: in the working copy of 'file.txt', LF will be replaced by CRLF the next time Git touches it
+
+Ange Karara Mbabazi@DESKTOP-Q5MA0LI MINGW64 ~/git_task (feature-branch)
+$ git commit -m "Add changes in feature branch"
+[feature-branch 27c3a85] Add changes in feature branch
+ 1 file changed, 1 insertion(+)
+ create mode 100644 file.txt
+
+Ange Karara Mbabazi@DESKTOP-Q5MA0LI MINGW64 ~/git_task (feature-branch)
+$ git checkout main
+M       README.md
+M       test1.md
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+Ange Karara Mbabazi@DESKTOP-Q5MA0LI MINGW64 ~/git_task (main)
+$ echo "Main branch changes" >> file.txt
+
+Ange Karara Mbabazi@DESKTOP-Q5MA0LI MINGW64 ~/git_task (main)
+$ it add file.txt
+bash: it: command not found
+
+Ange Karara Mbabazi@DESKTOP-Q5MA0LI MINGW64 ~/git_task (main)
+$ git add file.txt
+warning: in the working copy of 'file.txt', LF will be replaced by CRLF the next time Git touches it
+
+Ange Karara Mbabazi@DESKTOP-Q5MA0LI MINGW64 ~/git_task (main)
+$ git commit -m "new changes in main branch"
+[main 9f05f6c] new changes in main branch
+ 1 file changed, 1 insertion(+)
+ create mode 100644 file.txt
+
+Ange Karara Mbabazi@DESKTOP-Q5MA0LI MINGW64 ~/git_task (main)
+$ git merge feature-branch
+Auto-merging file.txt
+CONFLICT (add/add): Merge conflict in file.txt
+Automatic merge failed; fix conflicts and then commit the result.
+
+Ange Karara Mbabazi@DESKTOP-Q5MA0LI MINGW64 ~/git_task (main|MERGING)
+$ git merge feature-branch
+error: Merging is not possible because you have unmerged files.
+hint: Fix them up in the work tree, and then use 'git add/rm <file>'
+hint: as appropriate to mark resolution and make a commit.
+fatal: Exiting because of an unresolved conflict.
+
+Ange Karara Mbabazi@DESKTOP-Q5MA0LI MINGW64 ~/git_task (main|MERGING)
+$ git add file.txt
+
+Ange Karara Mbabazi@DESKTOP-Q5MA0LI MINGW64 ~/git_task (main|MERGING)
+$ git commit -m "Resolved conflict"
+[main 7464f70] Resolved conflict
+```
+### 4.Resolving Merge Conflicts with a Merge Tool:
+```
+Ange Karara Mbabazi@DESKTOP-Q5MA0LI MINGW64 ~/git_task (main)
+$ git mergetool
+
+This message is displayed because 'merge.tool' is not configured.
+See 'git mergetool --tool-help' or 'git help config' for more details.
+'git mergetool' will now attempt to use one of the following tools:
+opendiff kdiff3 tkdiff xxdiff meld tortoisemerge gvimdiff diffuse diffmerge ecmerge p4merge araxis bc codecompare smerge emerge vimdiff nvimdiff
+No files need merging
+```
+### 5.Understanding Detached HEAD State:
+```
 
 ```
