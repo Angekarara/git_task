@@ -642,4 +642,33 @@ v1.0
 Ange Karara Mbabazi@DESKTOP-Q5MA0LI MINGW64 ~/git_task (main)
 $ git tag -d v1.0
 Deleted tag 'v1.0' (was dfb5073)
+
+```
+### 9. Pushing Local Work to Remote Repositories:
+```
+Ange Karara Mbabazi@DESKTOP-Q5MA0LI MINGW64 ~/git_task (main)
+$ git add .
+
+Ange Karara Mbabazi@DESKTOP-Q5MA0LI MINGW64 ~/git_task (main)
+$ git commit -m "new changes"
+[main 7994b36] new changes
+ 2 files changed, 25 insertions(+), 1 deletion(-)
+ create mode 100644 .gitignore
+
+Ange Karara Mbabazi@DESKTOP-Q5MA0LI MINGW64 ~/git_task (main)
+$ git push
+Enumerating objects: 6, done.
+Counting objects: 100% (6/6), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (4/4), 492 bytes | 492.00 KiB/s, done.
+Total 4 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/Angekarara/git_task.git
+   dfb5073..7994b36  main -> main
+```
+### 10.Pulling Changes from Remote Repositories:
+```
+Adding new changes remotely and pull
+
 ```
