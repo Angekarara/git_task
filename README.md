@@ -432,5 +432,87 @@ Already up to date.
 ```
 ### 8.Branch Rebasing:
 ```
+Ange Karara Mbabazi@DESKTOP-Q5MA0LI MINGW64 ~/git_task (main)
+$ git checkout ft/new-branch-from-commit
+M       README.md
+A       readme.txt
+Switched to branch 'ft/new-branch-from-commit'
 
+Ange Karara Mbabazi@DESKTOP-Q5MA0LI MINGW64 ~/git_task (ft/new-branch-from-commit)
+$ git rebase main
+error: cannot rebase: You have unstaged changes.
+error: additionally, your index contains uncommitted changes.
+error: Please commit or stash them.
+
+Ange Karara Mbabazi@DESKTOP-Q5MA0LI MINGW64 ~/git_task (ft/new-branch-from-commit)
+$ git add .
+git commit -m "Save work in progress"
+[ft/new-branch-from-commit e9bc0ae] Save work in progress
+ 2 files changed, 96 insertions(+)
+ create mode 100644 readme.txt
+
+Ange Karara Mbabazi@DESKTOP-Q5MA0LI MINGW64 ~/git_task (ft/new-branch-from-commit)
+$ git rebase main
+Successfully rebased and updated refs/heads/ft/new-branch-from-commit.
+Ange Karara Mbabazi@DESKTOP-Q5MA0LI MINGW64 ~/git_task (main)
+$ git merge ft/new-branch-from-commit
+Updating d89cff1..9cb9d7f
+Fast-forward
+ README.md  | 95 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ readme.txt |  1 +
+ 2 files changed, 96 insertions(+)
+ create mode 100644 readme.txt
+```
+### 9. Renaming Branches:
+```
+Ange Karara Mbabazi@DESKTOP-Q5MA0LI MINGW64 ~/git_task (main)
+$ git branch -m ft/new-branch-from-commit ft/improved-branch-name
+
+Ange Karara Mbabazi@DESKTOP-Q5MA0LI MINGW64 ~/git_task (main)
+$ git branch
+  ft/branch
+  ft/improved-branch-name
+* main
+```
+### 10.Checking Out Detached HEAD:
+
+```
+Ange Karara Mbabazi@DESKTOP-Q5MA0LI MINGW64 ~/git_task (main)
+$ git log
+commit 9cb9d7fd2e36685a9f01389d9dcbbf7dc3e68b02 (HEAD -> main, ft/improved-branch-name)
+Author: Angekarara <mbabange2020@gmail.com>
+Date:   Tue May 21 17:25:58 2024 +0200
+
+    Save work in progress
+
+commit d89cff1e3f1b1d0ec12a10253608380ad18ed5eb (origin/main)
+Merge: e2020db c383abb
+Author: Angekarara <99403587+Angekarara@users.noreply.github.com>
+Date:   Tue May 21 16:34:14 2024 +0200
+
+    Merge pull request #2 from Angekarara/ft/new-feature
+
+    Implemented core functionality for new feature
+
+Ange Karara Mbabazi@DESKTOP-Q5MA0LI MINGW64 ~/git_task (main)
+$ git checkout 9cb9d7fd2e36685a9f01389d9dcbbf7dc3e68b02
+M       README.md
+Note: switching to '9cb9d7fd2e36685a9f01389d9dcbbf7dc3e68b02'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+
+HEAD is now at 9cb9d7f Save work in progress
 ```
