@@ -516,3 +516,34 @@ Turn off this advice by setting config variable advice.detachedHead to false
 
 HEAD is now at 9cb9d7f Save work in progress
 ```
+
+## Part 3: Advanced Workflows (10+ Challenges)
+### 1.Stashing Changes:
+```
+Ange Karara Mbabazi@DESKTOP-Q5MA0LI MINGW64 ~/git_task (main)
+$ git stash
+Saved working directory and index state WIP on main: 131a781 new changes
+
+Ange Karara Mbabazi@DESKTOP-Q5MA0LI MINGW64 ~/git_task (main)
+$ git stash list
+stash@{0}: WIP on main: 131a781 new changes
+```
+### 2.Retrieving Stashed Changes:
+```
+Ange Karara Mbabazi@DESKTOP-Q5MA0LI MINGW64 ~/git_task (main)
+$ git stash pop
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   test1.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Dropped refs/stash@{0} (3affdc5d09915eb0c4cc305fc779198a717846c0)
+```
+### 3.Branch Merging Conflicts (Continued):
+```
+
+```
