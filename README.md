@@ -618,5 +618,28 @@ No files need merging
 ```
 ### 5.Understanding Detached HEAD State:
 ```
+Ange Karara Mbabazi@DESKTOP-Q5MA0LI MINGW64 ~/git_task (main)
+$ git checkout ft/conflicts 
+Switched to branch 'ft/conflicts'
 
+Ange Karara Mbabazi@DESKTOP-Q5MA0LI MINGW64 ~/git_task (ft/conflicts)
+```
+### 6.
+
+### 7.Working with Tags:
+```
+
+Ange Karara Mbabazi@DESKTOP-Q5MA0LI MINGW64 ~/git_task (main)
+$ git tag v1.0
+```
+### 8.Listing and Deleting Tags:
+```
+
+Ange Karara Mbabazi@DESKTOP-Q5MA0LI MINGW64 ~/git_task (main)
+$ git tag
+v1.0
+
+Ange Karara Mbabazi@DESKTOP-Q5MA0LI MINGW64 ~/git_task (main)
+$ git tag -d v1.0
+Deleted tag 'v1.0' (was dfb5073)
 ```
