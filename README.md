@@ -671,4 +671,19 @@ To https://github.com/Angekarara/git_task.git
 ```
 Adding new changes remotely and pull
 
+Ange Karara Mbabazi@DESKTOP-Q5MA0LI MINGW64 ~/git_task (main)
+$ git pull origin main
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), 1.33 KiB | 40.00 KiB/s, done.
+From https://github.com/Angekarara/git_task
+ * branch            main       -> FETCH_HEAD
+   7994b36..5fd935b  main       -> origin/main
+Updating 7994b36..5fd935b
+Fast-forward
+ README.md | 29 +++++++++++++++++++++++++++++
+ 1 file changed, 29 insertions(+)
+
 ```
