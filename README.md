@@ -287,5 +287,55 @@ Successfully rebased and updated refs/heads/main.
 ### 8.Cherry-Picking Commits:
 
 ```
+Ange Karara Mbabazi@DESKTOP-Q5MA0LI MINGW64 ~/git_task (ft/branch)
+$ git checkout main
+Switched to branch 'main'
+Your branch and 'origin/main' have diverged,
+and have 2 and 2 different commits each, respectively.
+  (use "git pull" if you want to integrate the remote branch with yours)
 
+Ange Karara Mbabazi@DESKTOP-Q5MA0LI MINGW64 ~/git_task (main)
+$ git log ft/branch
+commit 8bb14196c1cf7772f3a1ad90be9cf3495a223704 (origin/ft/branch, ft/branch)
+Author: Angekarara <mbabange2020@gmail.com>
+Date:   Tue May 21 15:13:45 2024 +0200
+
+    readme file
+
+commit 4fde62514d54398974d819f30d5f5ecf6360330a
+Author: Angekarara <mbabange2020@gmail.com>
+Date:   Tue May 21 15:09:06 2024 +0200
+
+    Implemented test 5
+
+commit abf68aa31ab5a94dd97b380fb8fa522afbca9712 (HEAD -> main)
+Author: Angekarara <mbabange2020@gmail.com>
+
+Ange Karara Mbabazi@DESKTOP-Q5MA0LI MINGW64 ~/git_task (main)
+$ git cherry-pick 4fde62514d54398974d819f30d5f5ecf6360330a
+[main 5665c2b] Implemented test 5
+ Date: Tue May 21 15:09:06 2024 +0200
+ 1 file changed, 1 insertion(+)
+ create mode 100644 test5.md
 ```
+### 9. Visualizing Commit History (Bonus):
+```
+Ange Karara Mbabazi@DESKTOP-Q5MA0LI MINGW64 ~/git_task (main)
+$ git log --graph
+*   commit 6a5e3f38ca6771bfdbd2b895115a5e6b653e7511 (HEAD -> main)
+|\  Merge: 5665c2b 5fec1ee
+| | Author: Angekarara <mbabange2020@gmail.com>
+| | Date:   Tue May 21 15:37:10 2024 +0200
+| |
+| |     Merge branch 'main' of https://github.com/Angekarara/git_task
+| |
+| *   commit 5fec1ee9692ba9a2396cabb9dd9dab557f93bead (origin/main)
+| |\  Merge: 6f5b4d3 8bb1419
+| | | Author: Angekarara <99403587+Angekarara@users.noreply.github.com>
+| | | Date:   Tue May 21 15:36:29 2024 +0200
+| | |
+| | |     Merge pull request #1 from Angekarara/ft/branch
+| | |
+:
+```
+
